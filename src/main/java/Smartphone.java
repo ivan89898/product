@@ -1,5 +1,5 @@
 public class Smartphone extends Product {
-    private String producer;
+    protected String producer;
 
     public Smartphone(int id, String name, int price, String producer) {
         super(id, name, price);
@@ -12,13 +12,5 @@ public class Smartphone extends Product {
 
     public void setProducer(String producer) {
         this.producer = producer;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }
