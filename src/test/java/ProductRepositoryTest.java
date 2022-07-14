@@ -76,5 +76,17 @@ public class ProductRepositoryTest {
         String actual = smartphone4.getProducer();
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void test() {
+        repository.add(product1);
+        repository.add(product2);
+        repository.add(product3);
+        Assertions.assertThrows(NotFoundException.class, () -> {
+            repository.removeById(-100);
+        });
+
+    }
+
 }
 
